@@ -1,0 +1,297 @@
+/* ============================================================
+   EventVerse — Event Detail Page Styles
+   ============================================================ */
+
+.detail-page { padding-top: 80px; }
+
+.detail-hero {
+  position: relative;
+  height: 400px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: var(--space-3xl);
+}
+
+.detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-bg-primary) 0%, transparent 60%);
+}
+
+.detail-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-2xl);
+  z-index: 1;
+}
+
+.detail-hero-content h1 {
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--space-md);
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.detail-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.detail-meta-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-accent-purple);
+}
+
+/* ── Detail Layout ── */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* ── Detail Content ── */
+.detail-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.detail-section h3 {
+  font-family: var(--font-body);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.detail-description {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-loose);
+}
+
+.detail-description p {
+  margin-bottom: var(--space-md);
+}
+
+/* Schedule / Agenda */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.schedule-item {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+
+.schedule-item:hover {
+  border-color: var(--color-accent-purple);
+}
+
+.schedule-time {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent-purple);
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.schedule-info h5 {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 0.25rem;
+}
+
+.schedule-info p {
+  font-size: var(--fs-sm);
+}
+
+/* ── Sidebar Sticky ── */
+.detail-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.ticket-card {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.ticket-card h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-lg);
+}
+
+.ticket-tier {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.ticket-tier:hover,
+.ticket-tier.selected {
+  border-color: var(--color-accent-purple);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.ticket-tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.ticket-tier-name {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+}
+
+.ticket-tier-price {
+  font-weight: var(--fw-bold);
+  color: var(--color-accent-purple);
+}
+
+.ticket-tier-desc {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.ticket-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-md);
+}
+
+.ticket-total-label {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.ticket-total-price {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+}
+
+.ticket-card .btn {
+  width: 100%;
+  margin-top: var(--space-lg);
+}
+
+/* Organizer Card */
+.organizer-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.organizer-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.organizer-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-xl);
+  color: #fff;
+  font-weight: var(--fw-bold);
+}
+
+.organizer-name {
+  font-weight: var(--fw-semibold);
+}
+
+.organizer-role {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.organizer-stats {
+  display: flex;
+  gap: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.organizer-stat {
+  text-align: center;
+}
+
+.organizer-stat-number {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  color: var(--color-accent-purple);
+}
+
+.organizer-stat-label {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* Related Events */
+.related-events-scroll {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .detail-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-hero { height: 280px; }
+  .related-events-scroll { grid-template-columns: 1fr; }
+}

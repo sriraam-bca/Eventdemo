@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Event — EventVerse</title>
+  <meta name="description" content="Create your event on EventVerse. Set up details, choose a venue, add tickets, and publish in minutes." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages/create-event.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#logo-g)">E</text></svg><span>Eventverse</span></a>
+      <div class="navbar-links" id="navLinks">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="events.html" class="navbar-link">Events</a>
+        <a href="venues.html" class="navbar-link">Venues</a>
+        <a href="vendors.html" class="navbar-link">Vendors</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="create-event.html" class="btn btn-primary btn-sm">Create Event</a>
+        <button class="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <div class="navbar-avatar">👤</div>
+        <div class="navbar-toggle" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="create-page">
+    <div class="container">
+      <div class="create-header reveal">
+        <span class="badge badge-pink">🚀 New Event</span>
+        <h2>Create Your <span class="text-gradient">Event</span></h2>
+        <p style="color:var(--color-text-secondary);max-width:500px;margin:var(--space-sm) auto 0;">Set up your event in minutes. Fill in the details and let EventVerse handle the rest.</p>
+      </div>
+
+      <!-- Progress Steps -->
+      <div class="progress-steps reveal" style="margin-top:var(--space-2xl);">
+        <div class="progress-step">
+          <div class="step-circle active">
+            1
+            <span class="step-label">Details</span>
+          </div>
+        </div>
+        <div class="step-line"></div>
+        <div class="progress-step">
+          <div class="step-circle">
+            2
+            <span class="step-label">Venue</span>
+          </div>
+        </div>
+        <div class="step-line"></div>
+        <div class="progress-step">
+          <div class="step-circle">
+            3
+            <span class="step-label">Tickets</span>
+          </div>
+        </div>
+        <div class="step-line"></div>
+        <div class="progress-step">
+          <div class="step-circle">
+            4
+            <span class="step-label">Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Wizard -->
+      <div class="form-wizard">
+
+        <!-- ═══ STEP 1: Event Details ═══ -->
+        <div class="wizard-step active">
+          <div class="form-card">
+            <h3>📝 Event Details</h3>
+            <div class="form-group">
+              <label class="form-label" for="event-name">Event Name *</label>
+              <input type="text" class="form-control" id="event-name" placeholder="e.g., Summer Music Festival 2026" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="event-category">Category *</label>
+                <select class="form-control" id="event-category">
+                  <option value="" disabled selected>Select category</option>
+                  <option>Wedding</option>
+                  <option>Corporate</option>
+                  <option>Birthday</option>
+                  <option>Concert</option>
+                  <option>Festival</option>
+                  <option>Conference</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="event-type">Event Type *</label>
+                <select class="form-control" id="event-type">
+                  <option value="" disabled selected>Select type</option>
+                  <option>In-Person</option>
+                  <option>Virtual</option>
+                  <option>Hybrid</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="event-date">Date *</label>
+                <input type="date" class="form-control" id="event-date" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="event-time">Time *</label>
+                <input type="time" class="form-control" id="event-time" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="event-description">Description</label>
+              <textarea class="form-control" id="event-description" placeholder="Describe your event, what attendees can expect, highlights..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Event Cover Image</label>
+              <div class="image-upload">
+                <div class="image-upload-icon">📷</div>
+                <p>Drag & drop an image here, or click to browse</p>
+                <span class="btn btn-outline btn-sm" style="margin-top:var(--space-md);">Choose File</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <div></div>
+            <button class="btn btn-primary" data-wizard="next">Continue → Venue & Location</button>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 2: Venue & Location ═══ -->
+        <div class="wizard-step">
+          <div class="form-card">
+            <h3>📍 Venue & Location</h3>
+            <div class="form-group">
+              <label class="form-label" for="event-venue">Venue Name *</label>
+              <input type="text" class="form-control" id="event-venue" placeholder="e.g., Grand Palazzo Ballroom" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="event-location">Address *</label>
+              <input type="text" class="form-control" id="event-location" placeholder="e.g., 142 West 57th St, New York, NY 10019" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="event-city">City</label>
+                <input type="text" class="form-control" id="event-city" placeholder="New York" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="event-capacity">Capacity</label>
+                <input type="number" class="form-control" id="event-capacity" placeholder="e.g., 500" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Vendors (Optional)</label>
+              <div style="display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-top:var(--space-sm);">
+                <span class="tag" style="cursor:pointer;">🍽️ Catering</span>
+                <span class="tag" style="cursor:pointer;">📸 Photography</span>
+                <span class="tag" style="cursor:pointer;">🎨 Décor</span>
+                <span class="tag" style="cursor:pointer;">🎵 Music/DJ</span>
+                <span class="tag" style="cursor:pointer;">💐 Florals</span>
+                <span class="tag" style="cursor:pointer;">📋 Planning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" data-wizard="prev">← Back</button>
+            <button class="btn btn-primary" data-wizard="next">Continue → Tickets</button>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 3: Tickets ═══ -->
+        <div class="wizard-step">
+          <div class="form-card">
+            <h3>🎟️ Ticket Tiers</h3>
+            <p style="font-size:var(--fs-sm);color:var(--color-text-muted);margin-bottom:var(--space-xl);">Define your ticket tiers. You can add multiple tiers with different pricing and quantities.</p>
+
+            <div class="ticket-builder">
+              <div class="ticket-row">
+                <div class="form-group">
+                  <label class="form-label">Tier Name</label>
+                  <input type="text" class="form-control" placeholder="e.g., General Admission" value="General Admission" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Price ($)</label>
+                  <input type="number" class="form-control" placeholder="0" value="50" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Quantity</label>
+                  <input type="number" class="form-control" placeholder="100" value="200" />
+                </div>
+                <button class="ticket-remove-btn" aria-label="Remove">✕</button>
+              </div>
+
+              <div class="ticket-row">
+                <div class="form-group">
+                  <label class="form-label">Tier Name</label>
+                  <input type="text" class="form-control" placeholder="e.g., VIP" value="VIP" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Price ($)</label>
+                  <input type="number" class="form-control" placeholder="0" value="150" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Quantity</label>
+                  <input type="number" class="form-control" placeholder="100" value="50" />
+                </div>
+                <button class="ticket-remove-btn" aria-label="Remove">✕</button>
+              </div>
+
+              <button class="add-ticket-btn">+ Add Another Tier</button>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" data-wizard="prev">← Back</button>
+            <button class="btn btn-primary" data-wizard="next">Continue → Review</button>
+          </div>
+        </div>
+
+        <!-- ═══ STEP 4: Review & Publish ═══ -->
+        <div class="wizard-step">
+          <div class="form-card">
+            <h3>✅ Review & Publish</h3>
+            <p style="font-size:var(--fs-sm);color:var(--color-text-muted);margin-bottom:var(--space-xl);">Double-check your event details before publishing.</p>
+
+            <div class="review-section">
+              <div class="review-item">
+                <span class="review-label">Event Name</span>
+                <span class="review-value" id="review-name">—</span>
+              </div>
+              <div class="review-item">
+                <span class="review-label">Category</span>
+                <span class="review-value" id="review-category">—</span>
+              </div>
+              <div class="review-item">
+                <span class="review-label">Date</span>
+                <span class="review-value" id="review-date">—</span>
+              </div>
+              <div class="review-item">
+                <span class="review-label">Time</span>
+                <span class="review-value" id="review-time">—</span>
+              </div>
+              <div class="review-item">
+                <span class="review-label">Venue</span>
+                <span class="review-value" id="review-venue">—</span>
+              </div>
+              <div class="review-item">
+                <span class="review-label">Location</span>
+                <span class="review-value" id="review-location">—</span>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div style="display:flex;align-items:center;gap:var(--space-sm);margin-bottom:var(--space-md);">
+              <input type="checkbox" id="terms-check" style="width:18px;height:18px;accent-color:var(--color-accent-purple);" />
+              <label for="terms-check" style="font-size:var(--fs-sm);color:var(--color-text-secondary);cursor:pointer;">
+                I agree to the <a href="#" style="color:var(--color-accent-purple);">Terms of Service</a> and <a href="#" style="color:var(--color-accent-purple);">Event Guidelines</a>
+              </label>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-secondary" data-wizard="prev">← Back</button>
+            <button class="btn btn-primary btn-lg" onclick="alert('🎉 Event Published Successfully!\\n\\nYour event is now live on EventVerse. You will receive a confirmation email shortly.');">🚀 Publish Event</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="flogo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#flogo-g)">E</text></svg><span>Eventverse</span></a><p>Your all-in-one platform for seamless event experiences.</p><div class="footer-socials"><a href="#" class="footer-social-link">𝕏</a><a href="#" class="footer-social-link">f</a><a href="#" class="footer-social-link">📷</a><a href="#" class="footer-social-link">in</a></div></div>
+        <div><h4 class="footer-heading">Platform</h4><div class="footer-links"><a href="events.html" class="footer-link">Browse Events</a><a href="venues.html" class="footer-link">Find Venues</a><a href="vendors.html" class="footer-link">Hire Vendors</a><a href="create-event.html" class="footer-link">Create Event</a></div></div>
+        <div><h4 class="footer-heading">Company</h4><div class="footer-links"><a href="#" class="footer-link">About Us</a><a href="#" class="footer-link">Careers</a><a href="#" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div></div>
+        <div><h4 class="footer-heading">Support</h4><div class="footer-links"><a href="#" class="footer-link">Help Center</a><a href="#" class="footer-link">Community</a><a href="#" class="footer-link">API Docs</a><a href="contact.html" class="footer-link">Feedback</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 EventVerse. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/form-wizard.js"></script>
+</body>
+</html>

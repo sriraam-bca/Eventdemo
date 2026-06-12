@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — EventVerse</title>
+  <meta name="description" content="Get in touch with the EventVerse team. We're here to help with any questions about events, venues, or vendors." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages/contact.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#logo-g)">E</text></svg><span>Eventverse</span></a>
+      <div class="navbar-links" id="navLinks">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="events.html" class="navbar-link">Events</a>
+        <a href="venues.html" class="navbar-link">Venues</a>
+        <a href="vendors.html" class="navbar-link">Vendors</a>
+        <a href="contact.html" class="navbar-link active">Contact</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="create-event.html" class="btn btn-primary btn-sm">Create Event</a>
+        <button class="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <div class="navbar-avatar">👤</div>
+        <div class="navbar-toggle" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="contact-page section">
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header reveal">
+        <span class="badge">📬 Get in Touch</span>
+        <h2>Contact <span class="text-gradient">Us</span></h2>
+        <p>Have a question, feedback, or partnership inquiry? We'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Left: Info -->
+        <div class="contact-info reveal-left">
+          <h3 style="font-family:var(--font-body);margin-bottom:var(--space-md);">We're Here to Help</h3>
+          <p>Whether you're planning your first event or managing thousands, our team is ready to support you every step of the way.</p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon">📧</div>
+              <div>
+                <h5>Email Us</h5>
+                <p>support@eventverse.com</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">📞</div>
+              <div>
+                <h5>Call Us</h5>
+                <p>+1 (800) 555-EVENT</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div>
+                <h5>Visit Us</h5>
+                <p>350 Fifth Avenue, Suite 4200<br />New York, NY 10118</p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">⏰</div>
+              <div>
+                <h5>Business Hours</h5>
+                <p>Mon – Fri: 9:00 AM – 6:00 PM EST<br />Sat: 10:00 AM – 2:00 PM EST</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-placeholder">
+            <span>📍 350 Fifth Avenue, Suite 4200, New York, NY 10118</span>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-card reveal-right">
+          <h3>Send Us a Message</h3>
+          <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); alert('Message sent! We\'ll get back to you within 24 hours.'); this.reset();">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name *</label>
+                <input type="text" class="form-control" id="contact-name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address *</label>
+                <input type="email" class="form-control" id="contact-email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Subject *</label>
+              <select class="form-control" id="contact-subject" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option>General Inquiry</option>
+                <option>Event Planning Help</option>
+                <option>Vendor Onboarding</option>
+                <option>Technical Support</option>
+                <option>Partnership / Sponsorship</option>
+                <option>Billing / Payments</option>
+                <option>Bug Report</option>
+                <option>Feature Request</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message *</label>
+              <textarea class="form-control" id="contact-message" placeholder="Tell us how we can help you..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Send Message →</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="section-header reveal">
+          <span class="badge badge-blue">❓ FAQ</span>
+          <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+        </div>
+
+        <div style="max-width:800px;margin:0 auto;" class="reveal">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>How do I create an event on EventVerse?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                Creating an event is easy! Click the "Create Event" button in the navigation bar, fill in your event details across our 4-step wizard (Details → Venue → Tickets → Review), and hit publish. Your event will be live on EventVerse within minutes.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Is EventVerse free to use?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                EventVerse is free for attendees to browse and book events. Event organizers can create events for free, with a small service fee applied to paid ticket sales. We also offer premium plans with advanced analytics, priority support, and custom branding options.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>How does vendor verification work?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                All vendors on EventVerse go through a thorough verification process. We check their business credentials, review their portfolio, and collect feedback from past clients. Verified vendors receive a ✅ badge on their profile, giving organizers confidence in their quality and reliability.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>What payment methods are accepted?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                We accept all major credit and debit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, Google Pay, and bank transfers. All payments are processed securely with industry-standard encryption and PCI-DSS compliance.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Can I cancel or reschedule my event?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                Yes! Event organizers can cancel or reschedule their events from the event management dashboard. Attendees will be automatically notified of any changes. Refund policies vary — organizers can set their own refund terms, which are displayed on each event page.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>How do I contact support?</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                You can reach our support team via email at support@eventverse.com, by phone at +1 (800) 555-EVENT during business hours, or by filling out the contact form above. Our average response time is under 4 hours during business days.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="flogo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#flogo-g)">E</text></svg><span>Eventverse</span></a><p>Your all-in-one platform for seamless event experiences.</p><div class="footer-socials"><a href="#" class="footer-social-link">𝕏</a><a href="#" class="footer-social-link">f</a><a href="#" class="footer-social-link">📷</a><a href="#" class="footer-social-link">in</a></div></div>
+        <div><h4 class="footer-heading">Platform</h4><div class="footer-links"><a href="events.html" class="footer-link">Browse Events</a><a href="venues.html" class="footer-link">Find Venues</a><a href="vendors.html" class="footer-link">Hire Vendors</a><a href="create-event.html" class="footer-link">Create Event</a></div></div>
+        <div><h4 class="footer-heading">Company</h4><div class="footer-links"><a href="#" class="footer-link">About Us</a><a href="#" class="footer-link">Careers</a><a href="#" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div></div>
+        <div><h4 class="footer-heading">Support</h4><div class="footer-links"><a href="#" class="footer-link">Help Center</a><a href="#" class="footer-link">Community</a><a href="#" class="footer-link">API Docs</a><a href="contact.html" class="footer-link">Feedback</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 EventVerse. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventVerse — Your Universe of Unforgettable Events</title>
+  <meta name="description" content="EventVerse is your all-in-one platform to plan, manage and celebrate any event seamlessly. Explore events, venues, and trusted vendors." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages/home.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="EventVerse Home">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs>
+          <rect width="64" height="64" rx="14" fill="#2D1B4E"/>
+          <text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#logo-g)">E</text>
+        </svg>
+        <span>Eventverse</span>
+      </a>
+
+      <div class="navbar-links" id="navLinks">
+        <a href="index.html" class="navbar-link active">Home</a>
+        <a href="events.html" class="navbar-link">Events</a>
+        <a href="venues.html" class="navbar-link">Venues</a>
+        <a href="vendors.html" class="navbar-link">Vendors</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+
+      <div class="navbar-actions">
+        <a href="create-event.html" class="btn btn-primary btn-sm">Create Event</a>
+        <button class="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <div class="navbar-avatar" aria-label="User profile">👤</div>
+        <div class="navbar-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/images/hero-bg.png" alt="Vibrant concert event with purple stage lights" />
+    </div>
+    <div class="hero-particles" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+      <div class="hero-label">✨ Plan • Manage • Celebrate</div>
+      <h1>Your Universe of<br />Unforgettable <span class="text-gradient">Events</span></h1>
+      <p class="hero-description">EventVerse is your all-in-one platform to plan, manage and celebrate any event seamlessly. Discover amazing venues, connect with trusted vendors, and create memories that last.</p>
+      <div class="hero-buttons">
+        <a href="events.html" class="btn btn-primary btn-lg">Explore Events →</a>
+        <a href="create-event.html" class="btn btn-secondary btn-lg">Create Event</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ STATS BAR ═══════════════════ -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-inner reveal">
+        <div class="stat-item">
+          <div class="stat-number" data-count="5000" data-suffix="+">0</div>
+          <div class="stat-label">Events</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="1200" data-suffix="+">0</div>
+          <div class="stat-label">Venues</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="3000" data-suffix="+">0</div>
+          <div class="stat-label">Vendors</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="50000" data-suffix="+">0</div>
+          <div class="stat-label">Happy Users</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CATEGORIES ═══════════════════ -->
+  <section class="section section-alt" id="categories">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">🎯 Categories</span>
+        <h2>Explore Top <span class="text-gradient">Categories</span></h2>
+        <p>Discover events tailored to your interests — from elegant weddings to electrifying concerts.</p>
+      </div>
+
+      <div class="categories-grid stagger-children">
+        <div class="category-card">
+          <div class="category-icon">💒</div>
+          <h4>Weddings</h4>
+          <p>Make your big day perfect</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🏢</div>
+          <h4>Corporate</h4>
+          <p>Professional events that inspire</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🎂</div>
+          <h4>Birthdays</h4>
+          <p>Celebrate every special moment</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🎤</div>
+          <h4>Concerts</h4>
+          <p>Live events that entertain</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🎪</div>
+          <h4>Festivals</h4>
+          <p>Celebrate culture and traditions</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🌟</div>
+          <h4>More Events</h4>
+          <p>Explore all events you love</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FEATURED EVENTS ═══════════════════ -->
+  <section class="section" id="featured-events" style="transition: background-color 0.4s ease;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-pink">🔥 Trending</span>
+        <h2>Featured <span class="text-gradient">Events</span></h2>
+        <p>Don't miss out on these incredible upcoming events curated just for you.</p>
+      </div>
+
+      <div class="featured-events-scroll stagger-children">
+        <!-- Event Card 1 -->
+        <div class="card event-card" data-category="wedding">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="assets/images/wedding.png" alt="Grand wedding celebration" />
+            <div class="date-badge">
+              <span class="date-badge-day">25</span>
+              <span class="date-badge-month">JUL</span>
+            </div>
+            <div class="price-tag">$120</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Grand Palazzo, New York
+            </div>
+            <h4 class="card-title">Royal Garden Wedding Gala</h4>
+            <p class="card-text">An enchanting evening of elegance, fine dining, and timeless celebrations.</p>
+            <div class="card-footer">
+              <span class="card-price">$120 <span>/ person</span></span>
+              <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="card event-card" data-category="corporate">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="assets/images/corporate.png" alt="Corporate tech summit" />
+            <div class="date-badge">
+              <span class="date-badge-day">08</span>
+              <span class="date-badge-month">AUG</span>
+            </div>
+            <div class="price-tag">$75</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Tech Hub, San Francisco
+            </div>
+            <h4 class="card-title">Global Tech Innovation Summit</h4>
+            <p class="card-text">Join industry leaders for keynotes, workshops, and networking opportunities.</p>
+            <div class="card-footer">
+              <span class="card-price">$75 <span>/ person</span></span>
+              <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="card event-card" data-category="birthday">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="assets/images/birthday.png" alt="Colorful birthday celebration" />
+            <div class="date-badge">
+              <span class="date-badge-day">15</span>
+              <span class="date-badge-month">SEP</span>
+            </div>
+            <div class="price-tag">$45</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Skyline Lounge, Miami
+            </div>
+            <h4 class="card-title">Neon Nights Birthday Bash</h4>
+            <p class="card-text">A dazzling celebration with neon lights, DJ sets, and unforgettable vibes.</p>
+            <div class="card-footer">
+              <span class="card-price">$45 <span>/ person</span></span>
+              <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ WHY CHOOSE US ═══════════════════ -->
+  <section class="section section-alt" id="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge badge-blue">💡 Why Us</span>
+        <h2>Why Choose <span class="text-gradient">EventVerse?</span></h2>
+        <p>Everything you need to create extraordinary events, all in one place.</p>
+      </div>
+
+      <div class="grid grid-4 stagger-children">
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h4>Easy Planning</h4>
+          <p>Plan events in just a few clicks with our intuitive tools and smart templates.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h4>All-in-One</h4>
+          <p>Everything you need in one platform — venues, vendors, tickets, and more.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h4>Trusted Vendors</h4>
+          <p>Connect with verified vendors who deliver excellence every single time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h4>Secure Payments</h4>
+          <p>100% secure and hassle-free payments with industry-standard encryption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="badge">💬 Testimonials</span>
+        <h2>What Our <span class="text-gradient">Users Say</span></h2>
+        <p>Trusted by thousands of event organizers and attendees worldwide.</p>
+      </div>
+
+      <div class="testimonials-grid stagger-children">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">EventVerse made planning my wedding incredibly easy. The vendor matching was spot-on and the platform guided me through every step!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SK</div>
+            <div>
+              <div class="testimonial-name">Sarah Kim</div>
+              <div class="testimonial-role">Bride, New York</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">We've organized 50+ corporate events through EventVerse. The analytics and vendor coordination tools are unmatched in the industry.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <div class="testimonial-name">Marcus Rodriguez</div>
+              <div class="testimonial-role">Event Director, TechCorp</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">As a vendor, EventVerse connects me with high-quality clients consistently. My bookings have tripled since joining the platform!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AP</div>
+            <div>
+              <div class="testimonial-name">Amira Patel</div>
+              <div class="testimonial-role">Photographer, Chicago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ NEWSLETTER ═══════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="newsletter reveal">
+        <h2>Stay in the Loop</h2>
+        <p>Subscribe to get the latest events, exclusive deals, and insider tips delivered straight to your inbox.</p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Thanks for subscribing!');">
+          <input type="email" placeholder="Enter your email address" required aria-label="Email address" />
+          <button type="submit" class="btn">Subscribe →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-logo">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="flogo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs>
+              <rect width="64" height="64" rx="14" fill="#2D1B4E"/>
+              <text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#flogo-g)">E</text>
+            </svg>
+            <span>Eventverse</span>
+          </a>
+          <p>Your all-in-one platform to plan, manage and celebrate any event seamlessly. A perfect blend of elegance, creativity and technology.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">f</a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Platform</h4>
+          <div class="footer-links">
+            <a href="events.html" class="footer-link">Browse Events</a>
+            <a href="venues.html" class="footer-link">Find Venues</a>
+            <a href="vendors.html" class="footer-link">Hire Vendors</a>
+            <a href="create-event.html" class="footer-link">Create Event</a>
+            <a href="#" class="footer-link">Pricing</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Company</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Careers</a>
+            <a href="#" class="footer-link">Blog</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">Press Kit</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Support</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Help Center</a>
+            <a href="#" class="footer-link">Community</a>
+            <a href="#" class="footer-link">API Docs</a>
+            <a href="#" class="footer-link">System Status</a>
+            <a href="contact.html" class="footer-link">Feedback</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 EventVerse. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

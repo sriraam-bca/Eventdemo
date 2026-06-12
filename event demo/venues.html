@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Venues — EventVerse</title>
+  <meta name="description" content="Discover stunning venues for your next event. Browse ballrooms, rooftop terraces, gardens, and conference centers." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages/venues.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#logo-g)">E</text></svg><span>Eventverse</span></a>
+      <div class="navbar-links" id="navLinks">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="events.html" class="navbar-link">Events</a>
+        <a href="venues.html" class="navbar-link active">Venues</a>
+        <a href="vendors.html" class="navbar-link">Vendors</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="create-event.html" class="btn btn-primary btn-sm">Create Event</a>
+        <button class="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <div class="navbar-avatar">👤</div>
+        <div class="navbar-toggle" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="venues-page">
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header reveal">
+        <span class="badge">🏛️ Venues</span>
+        <h2>Find the Perfect <span class="text-gradient">Venue</span></h2>
+        <p>From grand ballrooms to intimate gardens — discover venues that set the stage for unforgettable events.</p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="search-bar reveal" style="max-width:600px;margin:0 auto var(--space-2xl);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A0A8C0" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search venues by name or location..." id="venueSearch" />
+        <button class="btn btn-primary btn-sm">Search</button>
+      </div>
+
+      <div class="venues-controls reveal">
+        <div class="venues-filters">
+          <button class="filter-pill active" data-filter="all">All Venues</button>
+          <button class="filter-pill" data-filter="ballroom">Ballrooms</button>
+          <button class="filter-pill" data-filter="rooftop">Rooftops</button>
+          <button class="filter-pill" data-filter="garden">Gardens</button>
+          <button class="filter-pill" data-filter="conference">Conference</button>
+          <button class="filter-pill" data-filter="beach">Beach</button>
+        </div>
+        <div class="events-sort">
+          <label style="font-size:var(--fs-sm);color:var(--color-text-muted);">Sort by:</label>
+          <select class="form-control" style="width:auto;padding:0.5rem 2rem 0.5rem 0.75rem;">
+            <option>Popularity</option>
+            <option>Rating: Highest</option>
+            <option>Capacity: Largest</option>
+            <option>Price: Low to High</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Venues Grid -->
+      <div class="venues-grid stagger-children">
+        <!-- Venue 1 -->
+        <div class="venue-card" data-category="ballroom">
+          <div class="venue-img-wrapper">
+            <img class="venue-img" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=700&h=480&fit=crop" alt="Grand Palazzo Ballroom" />
+            <div class="venue-badge-row">
+              <span class="badge badge-success">⭐ Top Rated</span>
+            </div>
+          </div>
+          <div class="venue-body">
+            <h4 class="venue-name">Grand Palazzo Ballroom</h4>
+            <div class="venue-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Midtown Manhattan, New York
+            </div>
+            <div class="venue-stats">
+              <div class="venue-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                500 guests
+              </div>
+              <div class="venue-stat">
+                <span class="stars">★★★★★</span> 4.9
+              </div>
+              <div class="venue-stat" style="margin-left:auto;color:var(--color-accent-purple);font-weight:600;">
+                From $5,000
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 2 -->
+        <div class="venue-card" data-category="rooftop">
+          <div class="venue-img-wrapper">
+            <img class="venue-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700&h=480&fit=crop" alt="Skyline Terrace" />
+            <div class="venue-badge-row">
+              <span class="badge badge-pink">🔥 Trending</span>
+            </div>
+          </div>
+          <div class="venue-body">
+            <h4 class="venue-name">Skyline Terrace Rooftop</h4>
+            <div class="venue-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Downtown, Los Angeles
+            </div>
+            <div class="venue-stats">
+              <div class="venue-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                200 guests
+              </div>
+              <div class="venue-stat">
+                <span class="stars">★★★★★</span> 4.8
+              </div>
+              <div class="venue-stat" style="margin-left:auto;color:var(--color-accent-purple);font-weight:600;">
+                From $3,200
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 3 -->
+        <div class="venue-card" data-category="garden">
+          <div class="venue-img-wrapper">
+            <img class="venue-img" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700&h=480&fit=crop" alt="Enchanted Gardens" />
+          </div>
+          <div class="venue-body">
+            <h4 class="venue-name">Enchanted Garden Estate</h4>
+            <div class="venue-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Napa Valley, California
+            </div>
+            <div class="venue-stats">
+              <div class="venue-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                300 guests
+              </div>
+              <div class="venue-stat">
+                <span class="stars">★★★★☆</span> 4.7
+              </div>
+              <div class="venue-stat" style="margin-left:auto;color:var(--color-accent-purple);font-weight:600;">
+                From $4,500
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 4 -->
+        <div class="venue-card" data-category="conference">
+          <div class="venue-img-wrapper">
+            <img class="venue-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&h=480&fit=crop" alt="Innovation Center" />
+            <div class="venue-badge-row">
+              <span class="badge badge-blue">💼 Corporate</span>
+            </div>
+          </div>
+          <div class="venue-body">
+            <h4 class="venue-name">Innovation Conference Center</h4>
+            <div class="venue-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Financial District, Chicago
+            </div>
+            <div class="venue-stats">
+              <div class="venue-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                800 guests
+              </div>
+              <div class="venue-stat">
+                <span class="stars">★★★★★</span> 4.9
+              </div>
+              <div class="venue-stat" style="margin-left:auto;color:var(--color-accent-purple);font-weight:600;">
+                From $6,000
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 5 -->
+        <div class="venue-card" data-category="beach">
+          <div class="venue-img-wrapper">
+            <img class="venue-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&h=480&fit=crop" alt="Coastal Resort" />
+            <div class="venue-badge-row">
+              <span class="badge">🌊 Beachfront</span>
+            </div>
+          </div>
+          <div class="venue-body">
+            <h4 class="venue-name">Azure Coastal Resort</h4>
+            <div class="venue-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Malibu, California
+            </div>
+            <div class="venue-stats">
+              <div class="venue-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                250 guests
+              </div>
+              <div class="venue-stat">
+                <span class="stars">★★★★★</span> 4.8
+              </div>
+              <div class="venue-stat" style="margin-left:auto;color:var(--color-accent-purple);font-weight:600;">
+                From $7,500
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 6 -->
+        <div class="venue-card" data-category="ballroom">
+          <div class="venue-img-wrapper">
+            <img class="venue-img" src="https://images.unsplash.com/photo-1549488344-cbb6c34cf1ac?w=700&h=480&fit=crop" alt="Crystal Hall" />
+          </div>
+          <div class="venue-body">
+            <h4 class="venue-name">Crystal Chandelier Hall</h4>
+            <div class="venue-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Back Bay, Boston
+            </div>
+            <div class="venue-stats">
+              <div class="venue-stat">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                400 guests
+              </div>
+              <div class="venue-stat">
+                <span class="stars">★★★★☆</span> 4.6
+              </div>
+              <div class="venue-stat" style="margin-left:auto;color:var(--color-accent-purple);font-weight:600;">
+                From $4,800
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="pagination-btn">←</button>
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn">→</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="flogo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#flogo-g)">E</text></svg><span>Eventverse</span></a><p>Your all-in-one platform for seamless event experiences.</p><div class="footer-socials"><a href="#" class="footer-social-link">𝕏</a><a href="#" class="footer-social-link">f</a><a href="#" class="footer-social-link">📷</a><a href="#" class="footer-social-link">in</a></div></div>
+        <div><h4 class="footer-heading">Platform</h4><div class="footer-links"><a href="events.html" class="footer-link">Browse Events</a><a href="venues.html" class="footer-link">Find Venues</a><a href="vendors.html" class="footer-link">Hire Vendors</a><a href="create-event.html" class="footer-link">Create Event</a></div></div>
+        <div><h4 class="footer-heading">Company</h4><div class="footer-links"><a href="#" class="footer-link">About Us</a><a href="#" class="footer-link">Careers</a><a href="#" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div></div>
+        <div><h4 class="footer-heading">Support</h4><div class="footer-links"><a href="#" class="footer-link">Help Center</a><a href="#" class="footer-link">Community</a><a href="#" class="footer-link">API Docs</a><a href="contact.html" class="footer-link">Feedback</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 EventVerse. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trusted Vendors — EventVerse</title>
+  <meta name="description" content="Connect with verified event vendors: caterers, photographers, decorators, DJs, and more. Hire the best for your event." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages/vendors.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#logo-g)">E</text></svg><span>Eventverse</span></a>
+      <div class="navbar-links" id="navLinks">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="events.html" class="navbar-link">Events</a>
+        <a href="venues.html" class="navbar-link">Venues</a>
+        <a href="vendors.html" class="navbar-link active">Vendors</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="create-event.html" class="btn btn-primary btn-sm">Create Event</a>
+        <button class="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <div class="navbar-avatar">👤</div>
+        <div class="navbar-toggle" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="vendors-page">
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header reveal">
+        <span class="badge badge-success">✅ Verified</span>
+        <h2>Trusted <span class="text-gradient">Vendors</span></h2>
+        <p>Connect with verified professionals who deliver excellence for every type of event.</p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="search-bar reveal" style="max-width:600px;margin:0 auto var(--space-2xl);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A0A8C0" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search vendors by name or specialty..." id="vendorSearch" />
+        <button class="btn btn-primary btn-sm">Search</button>
+      </div>
+
+      <div class="venues-controls reveal">
+        <div class="vendors-filters venues-filters">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="catering">Catering</button>
+          <button class="filter-pill" data-filter="photography">Photography</button>
+          <button class="filter-pill" data-filter="decor">Décor</button>
+          <button class="filter-pill" data-filter="music">Music & DJ</button>
+          <button class="filter-pill" data-filter="florals">Florals</button>
+          <button class="filter-pill" data-filter="planning">Planning</button>
+        </div>
+      </div>
+
+      <!-- Vendors Grid -->
+      <div class="vendors-grid stagger-children">
+        <!-- Vendor 1 -->
+        <div class="vendor-card" data-category="catering">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #A855F722, #7C3AED22);">🍽️</div>
+          <h4 class="vendor-name">Savory Bites Catering</h4>
+          <div class="vendor-category">Catering & Cuisine</div>
+          <p class="vendor-description">Premium culinary experiences with globally-inspired menus for events of any scale.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★★</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+
+        <!-- Vendor 2 -->
+        <div class="vendor-card" data-category="photography">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #2986F622, #7C3AED22);">📸</div>
+          <h4 class="vendor-name">Lens & Light Studio</h4>
+          <div class="vendor-category">Photography & Videography</div>
+          <p class="vendor-description">Award-winning photographers capturing your most precious moments with artistic precision.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★★</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+
+        <!-- Vendor 3 -->
+        <div class="vendor-card" data-category="decor">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #00D68F22, #2986F622);">🎨</div>
+          <h4 class="vendor-name">Luxe Décor Studios</h4>
+          <div class="vendor-category">Event Decoration</div>
+          <p class="vendor-description">Transform any space into a breathtaking setting with bespoke design and premium installations.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★☆</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+
+        <!-- Vendor 4 -->
+        <div class="vendor-card" data-category="music">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #FFAA0022, #A855F722);">🎵</div>
+          <h4 class="vendor-name">BeatDrop Entertainment</h4>
+          <div class="vendor-category">Music & DJ Services</div>
+          <p class="vendor-description">Top DJs, live bands, and sound systems that keep the energy alive from start to finish.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★★</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+
+        <!-- Vendor 5 -->
+        <div class="vendor-card" data-category="florals">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #A855F722, #FFAA0022);">💐</div>
+          <h4 class="vendor-name">Bloom & Petal</h4>
+          <div class="vendor-category">Floral Design</div>
+          <p class="vendor-description">Exquisite floral arrangements crafted with seasonal blooms and artistic elegance.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★★</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+
+        <!-- Vendor 6 -->
+        <div class="vendor-card" data-category="planning">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #7C3AED22, #2986F622);">📋</div>
+          <h4 class="vendor-name">Elite Event Planners</h4>
+          <div class="vendor-category">Event Planning & Coordination</div>
+          <p class="vendor-description">Full-service event planning with meticulous attention to detail and flawless execution.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★★</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+
+        <!-- Vendor 7 -->
+        <div class="vendor-card" data-category="catering">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #00D68F22, #7C3AED22);">🧁</div>
+          <h4 class="vendor-name">Sweet Indulgence Bakery</h4>
+          <div class="vendor-category">Cakes & Desserts</div>
+          <p class="vendor-description">Custom wedding cakes, pastry bars, and dessert tables that wow every guest.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★☆</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+
+        <!-- Vendor 8 -->
+        <div class="vendor-card" data-category="photography">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #FFAA0022, #2986F622);">🎬</div>
+          <h4 class="vendor-name">Frame by Frame Films</h4>
+          <div class="vendor-category">Cinematic Videography</div>
+          <p class="vendor-description">Cinematic event films and highlight reels that tell your story beautifully.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★★</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+
+        <!-- Vendor 9 -->
+        <div class="vendor-card" data-category="decor">
+          <div class="vendor-logo" style="background:linear-gradient(135deg, #A855F722, #7C3AED22);">✨</div>
+          <h4 class="vendor-name">Sparkle & Shine Lighting</h4>
+          <div class="vendor-category">Lighting & Effects</div>
+          <p class="vendor-description">Professional lighting design, LED effects, and atmospheric installations for events.</p>
+          <div class="vendor-footer">
+            <span class="stars">★★★★★</span>
+            <span class="verified-badge">✅ Verified</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="pagination-btn">←</button>
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">→</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="flogo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#flogo-g)">E</text></svg><span>Eventverse</span></a><p>Your all-in-one platform for seamless event experiences.</p><div class="footer-socials"><a href="#" class="footer-social-link">𝕏</a><a href="#" class="footer-social-link">f</a><a href="#" class="footer-social-link">📷</a><a href="#" class="footer-social-link">in</a></div></div>
+        <div><h4 class="footer-heading">Platform</h4><div class="footer-links"><a href="events.html" class="footer-link">Browse Events</a><a href="venues.html" class="footer-link">Find Venues</a><a href="vendors.html" class="footer-link">Hire Vendors</a><a href="create-event.html" class="footer-link">Create Event</a></div></div>
+        <div><h4 class="footer-heading">Company</h4><div class="footer-links"><a href="#" class="footer-link">About Us</a><a href="#" class="footer-link">Careers</a><a href="#" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div></div>
+        <div><h4 class="footer-heading">Support</h4><div class="footer-links"><a href="#" class="footer-link">Help Center</a><a href="#" class="footer-link">Community</a><a href="#" class="footer-link">API Docs</a><a href="contact.html" class="footer-link">Feedback</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 EventVerse. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+</body>
+</html>

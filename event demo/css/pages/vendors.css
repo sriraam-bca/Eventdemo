@@ -1,0 +1,87 @@
+/* ============================================================
+   EventVerse — Vendors Page Styles
+   ============================================================ */
+
+.vendors-page { padding-top: 100px; }
+
+.vendors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.vendor-card {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.vendor-card:hover {
+  border-color: var(--color-accent-purple);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.vendor-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-lg);
+  margin: 0 auto var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: transform var(--transition-normal);
+}
+
+.vendor-card:hover .vendor-logo {
+  transform: scale(1.1);
+}
+
+.vendor-name {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
+}
+
+.vendor-category {
+  font-size: var(--fs-sm);
+  color: var(--color-accent-purple);
+  margin-bottom: var(--space-sm);
+}
+
+.vendor-description {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.vendor-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--fs-xs);
+  color: var(--color-success);
+  font-weight: var(--fw-medium);
+}
+
+@media (max-width: 1024px) {
+  .vendors-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .vendors-grid { grid-template-columns: 1fr; }
+}

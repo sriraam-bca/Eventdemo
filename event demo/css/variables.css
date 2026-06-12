@@ -1,0 +1,260 @@
+/* ============================================================
+   EventVerse — Design Tokens & CSS Custom Properties
+   ============================================================ */
+
+:root {
+  /* ── Colors (Purple & White Theme) ── */
+  --color-bg-primary:    #1A0A2E;
+  --color-bg-secondary:  #2D1B4E;
+  --color-bg-card:       rgba(45, 27, 78, 0.65);
+  --color-bg-glass:      rgba(45, 27, 78, 0.4);
+
+  --color-accent-purple: #7C3AED;
+  --color-accent-pink:   #A855F7;
+  --color-accent-blue:   #818CF8;
+
+  --color-text-primary:  #FFFFFF;
+  --color-text-secondary: #C4B5D9;
+  --color-text-muted:    #8B7AAE;
+
+  --color-border:        rgba(124, 58, 237, 0.25);
+  --color-border-hover:  rgba(124, 58, 237, 0.55);
+
+  --color-success:       #34D399;
+  --color-warning:       #FBBF24;
+  --color-error:         #F87171;
+
+  /* ── Gradients ── */
+  --gradient-primary:    linear-gradient(135deg, #7C3AED, #A855F7);
+  --gradient-blue:       linear-gradient(135deg, #818CF8, #7C3AED);
+  --gradient-dark:       linear-gradient(180deg, #1A0A2E 0%, #2D1B4E 100%);
+  --gradient-card-hover: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(168,85,247,0.12));
+  --gradient-hero:       linear-gradient(135deg, rgba(26,10,46,0.92) 0%, rgba(45,27,78,0.85) 50%, rgba(26,10,46,0.75) 100%);
+
+  /* ── Typography ── */
+  --font-body:    'Poppins', sans-serif;
+  --font-heading: 'Merriweather', serif;
+
+  --fs-xs:   0.75rem;    /* 12px */
+  --fs-sm:   0.875rem;   /* 14px */
+  --fs-base: 1rem;       /* 16px */
+  --fs-md:   1.125rem;   /* 18px */
+  --fs-lg:   1.25rem;    /* 20px */
+  --fs-xl:   1.5rem;     /* 24px */
+  --fs-2xl:  2rem;       /* 32px */
+  --fs-3xl:  2.5rem;     /* 40px */
+  --fs-4xl:  3rem;       /* 48px */
+  --fs-5xl:  3.5rem;     /* 56px */
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --lh-tight:  1.2;
+  --lh-normal: 1.6;
+  --lh-loose:  1.8;
+
+  /* ── Spacing ── */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* ── Border Radius ── */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 50%;
+  --radius-pill: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:   0 2px 8px rgba(26, 10, 46, 0.25);
+  --shadow-md:   0 4px 16px rgba(26, 10, 46, 0.35);
+  --shadow-lg:   0 8px 32px rgba(26, 10, 46, 0.45);
+  --shadow-xl:   0 16px 48px rgba(26, 10, 46, 0.55);
+  --shadow-glow-purple: 0 0 24px rgba(124, 58, 237, 0.45);
+  --shadow-glow-pink:   0 0 20px rgba(168, 85, 247, 0.35);
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow:   500ms ease;
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-index ── */
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-navbar:   300;
+  --z-modal:    400;
+  --z-toast:    500;
+
+  /* ── Container ── */
+  --container-max:     1280px;
+  --container-padding: 1.5rem;
+}
+
+/* ════════════════════════════════════════════════════════════
+   LIGHT THEME OVERRIDE (White & Purple)
+   ════════════════════════════════════════════════════════════ */
+[data-theme="light"] {
+  --color-bg-primary:    #FAFAFE;
+  --color-bg-secondary:  #FFFFFF;
+  --color-bg-card:       rgba(255, 255, 255, 0.9);
+  --color-bg-glass:      rgba(255, 255, 255, 0.65);
+
+  --color-text-primary:  #1A0A2E;
+  --color-text-secondary: #4A3660;
+  --color-text-muted:    #8B7AAE;
+
+  --color-border:        rgba(124, 58, 237, 0.12);
+  --color-border-hover:  rgba(124, 58, 237, 0.35);
+
+  --gradient-dark:       linear-gradient(180deg, #FAFAFE 0%, #F0EAFF 100%);
+  --gradient-card-hover: linear-gradient(135deg, rgba(124,58,237,0.06), rgba(168,85,247,0.04));
+  --gradient-hero:       linear-gradient(135deg, rgba(250,250,254,0.88) 0%, rgba(240,234,255,0.82) 50%, rgba(250,250,254,0.7) 100%);
+
+  --shadow-sm:   0 2px 8px rgba(124, 58, 237, 0.06);
+  --shadow-md:   0 4px 16px rgba(124, 58, 237, 0.08);
+  --shadow-lg:   0 8px 32px rgba(124, 58, 237, 0.10);
+  --shadow-xl:   0 16px 48px rgba(124, 58, 237, 0.12);
+  --shadow-glow-purple: 0 0 20px rgba(124, 58, 237, 0.18);
+  --shadow-glow-pink:   0 0 20px rgba(168, 85, 247, 0.12);
+}
+
+/* ── Alternating sections ── */
+.section-alt {
+  background: var(--color-bg-secondary);
+}
+
+[data-theme="light"] .section-alt {
+  background: #F0EAFF;
+}
+
+/* Light theme specific overrides */
+[data-theme="light"] .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+[data-theme="light"] .footer {
+  background: #1A0A2E;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #C4B5D9;
+  --color-text-muted: #8B7AAE;
+  --color-border: rgba(124, 58, 237, 0.25);
+  --color-bg-card: rgba(45, 27, 78, 0.65);
+}
+
+[data-theme="light"] .footer .navbar-logo span {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .hero {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .hero h1,
+[data-theme="light"] .hero .hero-label,
+[data-theme="light"] .hero .hero-description {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .hero .btn-secondary {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme="light"] .hero .hero-description {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+[data-theme="light"] .stats-inner {
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="light"] .category-card,
+[data-theme="light"] .feature-card,
+[data-theme="light"] .testimonial-card,
+[data-theme="light"] .venue-card,
+[data-theme="light"] .vendor-card,
+[data-theme="light"] .ticket-card,
+[data-theme="light"] .organizer-card,
+[data-theme="light"] .contact-card,
+[data-theme="light"] .contact-form-card,
+[data-theme="light"] .events-sidebar,
+[data-theme="light"] .form-card,
+[data-theme="light"] .accordion-item {
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .form-control {
+  background: #F0EAFF;
+}
+
+[data-theme="light"] .search-bar {
+  background: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #FAFAFE;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #D4C4F0;
+}
+
+/* ── Theme toggle button ── */
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-bg-secondary);
+  border: 1.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-accent-purple);
+  transform: rotate(30deg);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  position: absolute;
+  transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle .icon-sun {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+}
+
+.theme-toggle .icon-moon {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+[data-theme="light"] .theme-toggle .icon-sun {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+}

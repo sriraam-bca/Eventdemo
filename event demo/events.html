@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Events — EventVerse</title>
+  <meta name="description" content="Discover and book amazing events near you. Filter by category, date, and price to find the perfect event." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/pages/events.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#logo-g)">E</text></svg>
+        <span>Eventverse</span>
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="events.html" class="navbar-link active">Events</a>
+        <a href="venues.html" class="navbar-link">Venues</a>
+        <a href="vendors.html" class="navbar-link">Vendors</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="create-event.html" class="btn btn-primary btn-sm">Create Event</a>
+        <button class="theme-toggle" aria-label="Toggle light/dark mode"><span class="icon-sun">☀️</span><span class="icon-moon">🌙</span></button>
+        <div class="navbar-avatar">👤</div>
+        <div class="navbar-toggle" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ EVENTS PAGE ═══════════════════ -->
+  <main class="events-page">
+    <div class="container">
+      <!-- Page Header -->
+      <div class="section-header reveal" style="margin-bottom: var(--space-2xl);">
+        <span class="badge">🎉 Discover</span>
+        <h2>Browse <span class="text-gradient">Events</span></h2>
+        <p>Find the perfect event for every occasion. Use filters to narrow your search.</p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar reveal" style="max-width:600px;margin:0 auto var(--space-2xl);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A0A8C0" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search events by name, location, or keyword..." id="eventSearch" />
+        <button class="btn btn-primary btn-sm">Search</button>
+      </div>
+
+      <div class="events-layout">
+        <!-- Sidebar Filters -->
+        <aside class="events-sidebar reveal-left">
+          <div class="sidebar-section">
+            <h4 class="sidebar-title">Category</h4>
+            <div class="filter-options">
+              <div class="filter-option" data-category="wedding"><div class="filter-checkbox"></div> Weddings</div>
+              <div class="filter-option" data-category="corporate"><div class="filter-checkbox"></div> Corporate</div>
+              <div class="filter-option" data-category="birthday"><div class="filter-checkbox"></div> Birthdays</div>
+              <div class="filter-option" data-category="concert"><div class="filter-checkbox"></div> Concerts</div>
+              <div class="filter-option" data-category="festival"><div class="filter-checkbox"></div> Festivals</div>
+              <div class="filter-option" data-category="conference"><div class="filter-checkbox"></div> Conferences</div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h4 class="sidebar-title">Price Range</h4>
+            <input type="range" class="range-slider" min="0" max="500" value="250" />
+            <div class="price-range-display">
+              <span>$0</span>
+              <span class="price-max-val">$250</span>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h4 class="sidebar-title">Date</h4>
+            <div class="filter-options">
+              <div class="filter-option active" data-category="all"><div class="filter-checkbox"></div> Any Date</div>
+              <div class="filter-option" data-category="today"><div class="filter-checkbox"></div> Today</div>
+              <div class="filter-option" data-category="this-week"><div class="filter-checkbox"></div> This Week</div>
+              <div class="filter-option" data-category="this-month"><div class="filter-checkbox"></div> This Month</div>
+            </div>
+          </div>
+
+          <button class="sidebar-btn-reset">Reset All Filters</button>
+        </aside>
+
+        <!-- Events Content -->
+        <div>
+          <div class="events-header">
+            <div class="events-count">Showing <span>8</span> events</div>
+            <div class="events-sort">
+              <label>Sort by:</label>
+              <select class="form-control" style="width:auto;padding:0.5rem 2rem 0.5rem 0.75rem;">
+                <option>Relevance</option>
+                <option>Date: Newest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Popularity</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="events-grid stagger-children">
+            <!-- Event 1 -->
+            <div class="card event-card" data-category="wedding">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="assets/images/wedding.png" alt="Wedding celebration" />
+                <div class="date-badge"><span class="date-badge-day">25</span><span class="date-badge-month">JUL</span></div>
+                <div class="price-tag">$120</div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Grand Palazzo, New York
+                </div>
+                <h4 class="card-title">Royal Garden Wedding Gala</h4>
+                <p class="card-text">An enchanting evening of elegance and timeless celebrations.</p>
+                <div class="card-footer">
+                  <span class="card-price">$120 <span>/ person</span></span>
+                  <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="card event-card" data-category="corporate">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="assets/images/corporate.png" alt="Corporate conference" />
+                <div class="date-badge"><span class="date-badge-day">08</span><span class="date-badge-month">AUG</span></div>
+                <div class="price-tag">$75</div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Tech Hub, San Francisco
+                </div>
+                <h4 class="card-title">Global Tech Innovation Summit</h4>
+                <p class="card-text">Join industry leaders for keynotes and networking.</p>
+                <div class="card-footer">
+                  <span class="card-price">$75 <span>/ person</span></span>
+                  <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="card event-card" data-category="birthday">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="assets/images/birthday.png" alt="Birthday party" />
+                <div class="date-badge"><span class="date-badge-day">15</span><span class="date-badge-month">SEP</span></div>
+                <div class="price-tag">$45</div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Skyline Lounge, Miami
+                </div>
+                <h4 class="card-title">Neon Nights Birthday Bash</h4>
+                <p class="card-text">A dazzling celebration with neon lights and DJ sets.</p>
+                <div class="card-footer">
+                  <span class="card-price">$45 <span>/ person</span></span>
+                  <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="card event-card" data-category="concert">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600&h=400&fit=crop" alt="Live concert" />
+                <div class="date-badge"><span class="date-badge-day">22</span><span class="date-badge-month">OCT</span></div>
+                <div class="price-tag">$95</div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Arena Park, Los Angeles
+                </div>
+                <h4 class="card-title">Starlight Music Festival</h4>
+                <p class="card-text">An electrifying night with top artists and immersive sound.</p>
+                <div class="card-footer">
+                  <span class="card-price">$95 <span>/ person</span></span>
+                  <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 5 -->
+            <div class="card event-card" data-category="festival">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=400&fit=crop" alt="Cultural festival" />
+                <div class="date-badge"><span class="date-badge-day">03</span><span class="date-badge-month">NOV</span></div>
+                <div class="price-tag">$60</div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Cultural Center, Austin
+                </div>
+                <h4 class="card-title">Autumn Harvest Cultural Fest</h4>
+                <p class="card-text">Celebrate diverse traditions through art, food, and music.</p>
+                <div class="card-footer">
+                  <span class="card-price">$60 <span>/ person</span></span>
+                  <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 6 -->
+            <div class="card event-card" data-category="conference">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=400&fit=crop" alt="Conference" />
+                <div class="date-badge"><span class="date-badge-day">18</span><span class="date-badge-month">NOV</span></div>
+                <div class="price-tag">$150</div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Convention Center, Chicago
+                </div>
+                <h4 class="card-title">Future of AI Conference 2026</h4>
+                <p class="card-text">Deep dives into AI, ML, and the future of intelligent systems.</p>
+                <div class="card-footer">
+                  <span class="card-price">$150 <span>/ person</span></span>
+                  <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 7 -->
+            <div class="card event-card" data-category="wedding">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop" alt="Beach wedding" />
+                <div class="date-badge"><span class="date-badge-day">29</span><span class="date-badge-month">DEC</span></div>
+                <div class="price-tag">$200</div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Coastal Resort, Malibu
+                </div>
+                <h4 class="card-title">Sunset Beach Wedding</h4>
+                <p class="card-text">A breathtaking oceanfront ceremony at golden hour.</p>
+                <div class="card-footer">
+                  <span class="card-price">$200 <span>/ person</span></span>
+                  <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Event 8 -->
+            <div class="card event-card" data-category="concert">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop" alt="Music concert" />
+                <div class="date-badge"><span class="date-badge-day">05</span><span class="date-badge-month">JAN</span></div>
+                <div class="price-tag">$85</div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Echo Arena, Nashville
+                </div>
+                <h4 class="card-title">New Year Acoustic Night</h4>
+                <p class="card-text">Kick off the year with soulful acoustic performances.</p>
+                <div class="card-footer">
+                  <span class="card-price">$85 <span>/ person</span></span>
+                  <a href="event-detail.html" class="btn btn-outline btn-sm">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="pagination-btn">←</button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="flogo-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7C3AED"/><stop offset="100%" stop-color="#A855F7"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="#2D1B4E"/><text x="32" y="46" text-anchor="middle" font-family="serif" font-weight="bold" font-size="40" fill="url(#flogo-g)">E</text></svg><span>Eventverse</span></a>
+          <p>Your all-in-one platform to plan, manage and celebrate any event seamlessly.</p>
+          <div class="footer-socials"><a href="#" class="footer-social-link">𝕏</a><a href="#" class="footer-social-link">f</a><a href="#" class="footer-social-link">📷</a><a href="#" class="footer-social-link">in</a></div>
+        </div>
+        <div><h4 class="footer-heading">Platform</h4><div class="footer-links"><a href="events.html" class="footer-link">Browse Events</a><a href="venues.html" class="footer-link">Find Venues</a><a href="vendors.html" class="footer-link">Hire Vendors</a><a href="create-event.html" class="footer-link">Create Event</a></div></div>
+        <div><h4 class="footer-heading">Company</h4><div class="footer-links"><a href="#" class="footer-link">About Us</a><a href="#" class="footer-link">Careers</a><a href="#" class="footer-link">Blog</a><a href="contact.html" class="footer-link">Contact</a></div></div>
+        <div><h4 class="footer-heading">Support</h4><div class="footer-links"><a href="#" class="footer-link">Help Center</a><a href="#" class="footer-link">Community</a><a href="#" class="footer-link">API Docs</a><a href="contact.html" class="footer-link">Feedback</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 EventVerse. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+</body>
+</html>

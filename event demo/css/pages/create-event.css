@@ -1,0 +1,190 @@
+/* ============================================================
+   EventVerse — Create Event Page Styles
+   ============================================================ */
+
+.create-page {
+  padding-top: 120px;
+  padding-bottom: var(--space-4xl);
+}
+
+.create-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.form-wizard {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wizard-step {
+  display: none;
+  animation: fadeInUp 0.4s ease;
+}
+
+.wizard-step.active {
+  display: block;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-card {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.form-card h3 {
+  font-family: var(--font-body);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+/* Image Upload */
+.image-upload {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3xl);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.image-upload:hover {
+  border-color: var(--color-accent-purple);
+  background: rgba(124, 58, 237, 0.05);
+}
+
+.image-upload-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.5;
+}
+
+.image-upload p {
+  font-size: var(--fs-sm);
+}
+
+.image-upload .btn {
+  margin-top: var(--space-md);
+}
+
+/* Wizard Navigation */
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-xl);
+}
+
+/* Ticket Builder */
+.ticket-builder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ticket-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: var(--space-md);
+  align-items: end;
+  padding: var(--space-md);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.ticket-remove-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 61, 113, 0.1);
+  border: 1px solid rgba(255, 61, 113, 0.3);
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.ticket-remove-btn:hover {
+  background: var(--color-error);
+  color: #fff;
+}
+
+.add-ticket-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: var(--space-md);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.add-ticket-btn:hover {
+  border-color: var(--color-accent-purple);
+  color: var(--color-accent-purple);
+}
+
+/* Review Summary */
+.review-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.review-label {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.review-value {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .form-row { grid-template-columns: 1fr; }
+  .ticket-row { grid-template-columns: 1fr; }
+  .review-section { grid-template-columns: 1fr; }
+}
